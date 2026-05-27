@@ -1,3 +1,17 @@
+<div align="center">
+  <img src="public/logo.png" alt="Spark AI Logo" width="300"/>
+</div>
+
+<div align="center">
+  <a href="https://www.reddit.com/">
+    <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" alt="Reddit">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  </a>
+</div>
+
+
 # 🐚 PearlMod: The Moderator Command Center
 
 PearlMod is a high-fidelity, proactive moderation suite built for the Reddit Developer Platform. It empowers community leaders with client-side AI, automated enforcement engines, and real-time threat intelligence.
