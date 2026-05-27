@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "pearlmod",
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "inline": true,
+        "entry": "splash.html"
+      },
+      "game": {
+        "entry": "game.html"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "Create a new post",
+        "description": "pearlmod",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/post-create"
+      },
+      {
+        "label": "Example form",
+        "description": "Show a simple form",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/example-form"
+      },
+      {
+        "label": "Mop comments",
+        "description": "Remove this comment and all child comments. This might take a few seconds to run.",
+        "forUserType": "moderator",
+        "location": ["comment"],
+        "endpoint": "/internal/menu/mop-comments"
+      }
+    ]
+  },
+  "forms": {
+    "exampleForm": "/internal/form/example-submit",
+    "mopForm": "/internal/form/mop-submit"
+  },
+  "triggers": {
+    "onAppInstall": "/internal/triggers/on-app-install",
+    "onModAction": "/internal/triggers/mod-action",
+    "onPostReport": "/internal/triggers/report",
+    "onCommentReport": "/internal/triggers/report",
+    "onCommentSubmit": "/internal/triggers/content-submit",
+    "onPostSubmit": "/internal/triggers/content-submit",
+    "onPostUpdate": "/internal/triggers/on-post-update"
+  },
+  "permissions": {
+    "reddit": { "enable": true, "scope": "moderator" }
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build"
+  },
+  "dev": {
+    "subreddit": "pearlmod_dev"
+  }
+}

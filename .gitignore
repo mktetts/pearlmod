@@ -1,0 +1,10 @@
+.agents
+.codex
+*.webp
+node_modules
+.DS_Store
+dist
+.env 
+*.pdf
+
+pearlmod-ai
